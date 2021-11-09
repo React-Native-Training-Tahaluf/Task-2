@@ -28,7 +28,6 @@ export default MainScreen;
 var Style = StyleSheet.create({
     MainView:{
         flex:1,justifyContent:'center',alignItems:'center'
-        ,width:'100%',backgroundColor:'#fff'
     }
 }) 
 
