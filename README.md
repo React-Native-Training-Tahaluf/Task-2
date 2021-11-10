@@ -14,3 +14,9 @@ https://www.npmjs.com/package/react-native-splash-screen
 "react-native-splash-screen": "^3.2.0"
 ```
 
+### react-native-permissions
+https://www.npmjs.com/package/react-native-permissions
+```
+"react-native-permissions": "^3.1.0"
+```
+
