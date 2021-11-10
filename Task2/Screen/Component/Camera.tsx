@@ -1,13 +1,19 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import TakePermission from "../../Permission/Permission";
+import Permissions from "../../Permission/PermissionTypes";
 
 const Camera = () =>{    
     console.log('[Camera] : ***** Component ***** >>>>> Render');
 
     const [PreviewCamera,setPreviewCamera] = React.useState('');
 
-    const TakeImage = () =>{
+    const TakeImage = async () =>{
+
+    var Result =  await TakePermission(Permissions.Camera);
+
+    if(Result){
     let options : any ={
       mediaType : 'photo',
       quality:1,
@@ -21,6 +27,7 @@ const Camera = () =>{
       }
       setPreviewCamera(res.assets[0].base64);
     });
+    }
   }
   
   const CancelImage = () =>{
